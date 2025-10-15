@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şık Giriş Sayfası</title>
+    <title>Asil ve Sade Giriş</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Genel Sıfırlama ve Font */
+        /* Renk Paleti: Siyah (#121212), Altın (#FFD700), Açık Altın/Krem (#E6C252) */
+
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif; /* Gerçek projede Google Fonts'tan modern bir font ekleyebilirsiniz */
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Georgia', serif; /* Asil bir font seçimi */
+            background-color: #121212; /* Koyu siyah arka plan */
+            color: #E6C252; /* Açık altın/krem metin rengi */
             line-height: 1.6;
-            overflow-x: hidden; /* Yatay kaydırmayı engelle */
+            overflow-x: hidden;
         }
 
         /* Hero Bölümü Stilleri */
@@ -24,13 +27,11 @@
             align-items: center;
             height: 100vh; /* Tam ekran yüksekliği */
             text-align: center;
-            background: linear-gradient(135deg, #0f4c75 0%, #3282b8 100%); /* Şık degradé arka plan */
-            color: white;
-            padding: 20px;
+            padding: 40px;
             box-sizing: border-box;
             opacity: 0; /* JS ile görünür yapılacak */
-            transform: translateY(20px); /* JS ile yukarı kayacak */
-            transition: opacity 1s ease-out, transform 1s ease-out;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Yavaş ve şık geçiş */
         }
 
         .hero-section.loaded {
@@ -39,48 +40,56 @@
         }
 
         .hero-title {
-            font-size: 4em;
-            margin-bottom: 0.5em;
-            letter-spacing: 2px;
-            font-weight: 700;
+            font-size: 4.5em;
+            margin-bottom: 0.1em;
+            letter-spacing: 5px; /* Harf aralığı asil bir görünüm katar */
+            font-weight: 300; /* İnce font kalınlığı sadelik verir */
+            color: #FFD700; /* Saf altın rengi */
+            text-transform: uppercase;
         }
 
         .hero-subtitle {
-            font-size: 1.5em;
-            margin-bottom: 2em;
+            font-size: 1.4em;
+            margin-bottom: 3em;
+            font-style: italic;
             font-weight: 300;
         }
 
-        /* Şık Buton Stili */
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            color: #0f4c75;
-            background-color: white;
-            border: none;
+        /* Github Buton Stili */
+        .github-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 15px 35px;
+            font-size: 1.2em;
+            color: #121212; /* Buton içi metin siyah */
+            background-color: #FFD700; /* Buton arka plan altın */
+            border: 2px solid #FFD700;
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.4s, color 0.4s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2); /* Altın renginde hafif gölge */
         }
 
-        .cta-button:hover {
-            background-color: #e0e0e0;
-            transform: translateY(-3px); /* Hafif yukarı hareket */
+        .github-button i {
+            margin-right: 10px;
+            font-size: 1.4em;
+        }
+
+        .github-button:hover {
+            background-color: transparent; /* Tersine çevir */
+            color: #FFD700; /* Metin altın olsun */
+            transform: scale(1.05); /* Hafif büyütme */
         }
 
         /* Minimal Responsive Düzenleme */
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 2.5em;
+                font-size: 2.8em;
+                letter-spacing: 3px;
             }
             .hero-subtitle {
-                font-size: 1.2em;
-            }
-            .cta-button {
-                padding: 10px 20px;
+                font-size: 1em;
             }
         }
     </style>
@@ -88,21 +97,23 @@
 <body>
 
     <section class="hero-section" id="hero">
-        <h1 class="hero-title">Vizyonunuzu Gerçeğe Dönüştürün</h1>
-        <p class="hero-subtitle">Modern çözümlerle işinizi bir sonraki seviyeye taşıyın.</p>
-        <a href="#hakkimizda" class="cta-button">Hemen Başlayın</a>
+        <h1 class="hero-title">Sadelik, Zarafet, Teknoloji</h1>
+        <p class="hero-subtitle">Minimalist tasarımın ve kodun gücü.</p>
+        
+        <a href="SENIN_GITHUB_LINKIN_BURAYA" target="_blank" class="github-button">
+            <i class="fab fa-github"></i>
+            Projelerimi Keşfet
+        </a>
     </section>
 
     <script>
-        // Sayfa yüklendiğinde bir "yavaş yüklenme" (fade-in) efekti ekler
         document.addEventListener('DOMContentLoaded', function() {
             const hero = document.getElementById('hero');
 
-            // 100 milisaniye sonra 'loaded' sınıfını ekle
-            // Bu gecikme, CSS transition'ının çalışmasını garanti eder
+            // 200 milisaniye sonra 'loaded' sınıfını ekle
             setTimeout(() => {
                 hero.classList.add('loaded');
-            }, 100);
+            }, 200);
         });
     </script>
 
