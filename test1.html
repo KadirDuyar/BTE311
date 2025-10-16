@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB Programcılığı Testi - test1</title>
+</head>
+<body>
+
+    <h1>WEB Programcılığı Bilgi Seviyesi Testi</h1>
+    <hr>
+
+    <form action="#" method="get">
+        
+        <h2>Genel Bilgiler</h2>
+        
+        <p>
+            <label for="isim">Adınız Soyadınız:</label><br>
+            <input type="text" id="isim" name="isim" required>
+        </p>
+        
+        <p>
+            <label for="date">Bugünün Tarihi:</label><br>
+            <input type="date" id="date" name="test_tarihi">
+        </p>
+        
+        <hr>
+        <h2>Test Soruları</h2>
+
+        <fieldset>
+            <legend>Soru 1: Bir HTML sayfasının ana yapısını belirleyen etiketler hangileridir?</legend>
+            <input type="radio" id="s1_a" name="soru1" value="a" required>
+            <label for="s1_a">&lt;head&gt; ve &lt;body&gt;</label><br>
+            <input type="radio" id="s1_b" name="soru1" value="b">
+            <label for="s1_b">&lt;p&gt; ve &lt;div&gt;</label><br>
+            <input type="radio" id="s1_c" name="soru1" value="c">
+            <label for="s1_c">&lt;script&gt; ve &lt;style&gt;</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Soru 2: Aşağıdakilerden hangileri WEB tarayıcıları tarafından yorumlanır? (Birden fazla seçiniz)</legend>
+            <input type="checkbox" id="s2_a" name="soru2[]" value="html">
+            <label for="s2_a">HTML</label><br>
+            <input type="checkbox" id="s2_b" name="soru2[]" value="php">
+            <label for="s2_b">PHP</label><br>
+            <input type="checkbox" id="s2_c" name="soru2[]" value="css">
+            <label for="s2_c">CSS</label><br>
+            <input type="checkbox" id="s2_d" name="soru2[]" value="mysql">
+            <label for="s2_d">MySQL</label>
+        </fieldset>
+        
+        <p>
+            <label for="s3_select">Soru 3: WEB programcılığı alanında en çok ilgi duyduğunuz kısım hangisidir?</label><br>
+            <select id="s3_select" name="soru3" required>
+                <option value="" disabled selected>Lütfen bir seçim yapın</option>
+                <option value="frontend">Frontend (Kullanıcı Arayüzü)</option>
+                <option value="backend">Backend (Sunucu Tarafı)</option>
+                <option value="fullstack">Full-Stack (Her İkisi)</option>
+            </select>
+        </p>
+        
+        <p>
+            <label for="s4_sayi">Soru 4: Şu ana kadar kaç adet programlama dili öğrendiniz?</label><br>
+            <input type="number" id="s4_sayi" name="soru4" min="0" max="10" value="0">
+        </p>
+
+        <p>
+            <label for="s5_aciklama">Soru 5: Bu test hakkındaki genel görüşünüz:</label><br>
+            <textarea id="s5_aciklama" name="soru5" rows="4" cols="60" placeholder="Yorumunuzu buraya yazınız..."></textarea>
+        </p>
+        
+        <hr>
+        <h2>Ekstra Input Türleri (Görevi Tamamlamak İçin)</h2>
+        
+        <p>
+            <label for="range">HTML Bilginizi 1'den 10'a kadar puanlayın (1: Çok Düşük, 10: Çok İyi):</label><br>
+            <input type="range" id="range" name="bilgi_seviyesi" min="1" max="10" step="1" value="5">
+        </p>
+
+        <p>
+            <label for="color">Sayfanın Arka Planı için Hangi Rengi Önerirsiniz?</label><br>
+            <input type="color" id="color" name="fav_renk" value="#ffffff">
+        </p>
+        
+        <p>
+            <label for="file">Örnek Çalışmanızı Yükleyin (Opsiyonel):</label><br>
+            <input type="file" id="file" name="dosya_yukle">
+        </p>
+        
+        <input type="hidden" name="test_versiyonu" value="1.0">
+        
+        <br>
+        <button type="submit">Testi Bitir ve Cevapları Gönder</button>
+        <button type="reset">Tüm Cevapları Sil</button>
+
+    </form>
+    <hr>
+    <p>test1.html Sonu</p>
+
+</body>
+</html>
