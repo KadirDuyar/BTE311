@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ödev 2</title>
+
+    <link rel="stylesheet" href="stil.css"> 
+    <style>
+        .tablo2 {
+            width: 60%;
+            border: 1px solid black;
+            border-collapse: collapse; 
+            margin: 20px auto;
+        }
+
+        .tablo2 th, .tablo2 td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .tablo2 th {
+            background-color: #4CAF50; 
+            color: white;
+        }
+        .tablo2-h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="tablo1-h1">1. Tablo: Harici CSS Dosyası Kullanımı</h2>
+    <table class="tablo1">
+        <thead>
+            <tr>
+                <th>Öğrenci NO</th>
+                <th>Öğrenci Adı</th>
+                <th>Öğrenci Soyadı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>56</td>
+                <td>Ali</td>
+                <td>Aslan</td>
+            </tr>
+            <tr>
+                <td>57</td>
+                <td>Ayşe</td>
+                <td>Demir</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="tablo2-h2">2. Tablo: Sayfa İçi CSS Kullanımı</h2>
+    <table class="tablo2">
+        <thead>
+            <tr>
+                <th>Öğrenci NO</th>
+                <th>Öğrenci Adı</th>
+                <th>Öğrenci Soyadı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>56</td>
+                <td>Ali</td>
+                <td>Aslan</td>
+            </tr>
+            <tr>
+                <td>57</td>
+                <td>Ayşe</td>
+                <td>Demir</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <h2 style="text-align: center;">3. Tablo: Satır İçi CSS Kullanımı</h2>
+    <table style="width: 60%; border: 1px solid black; border-collapse: collapse; margin: 20px auto;">
+        <thead>
+            <tr style="background-color: #4CAF50; color: white;">
+                <th style="padding: 8px; border: 1px solid white;">Öğrenci NO</th>
+                <th style="padding: 8px; border: 1px solid white;">Öğrenci Adı</th>
+                <th style="padding: 8px; border: 1px solid white;">Öğrenci Soyadı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 8px; border: 1px solid black; text-align: center;">56</td>
+                <td style="padding: 8px; border: 1px solid black; text-align: center;">Ali</td>
+                <td style="padding: 8px; border: 1px solid black; text-align: center;">Aslan</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid black; text-align: center;">57</td>
+                <td style="padding: 8px; border: 1px solid black; text-align: center;">Ayşe</td>
+                <td style="padding: 8px; border: 1px solid black; text-align: center;">Demir</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
