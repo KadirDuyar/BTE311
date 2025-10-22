@@ -1,0 +1,20 @@
+.tablo1 {
+    width: 60%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.tablo1 th, .tablo1 td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.tablo1 th {
+    background-color: #4CAF50;
+    color: white;
+}
+.tablo1-h1{
+    text-align: center;
+}
