@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Ödev 2</title>
 
-    <link rel="stylesheet" href="odevler/odev2stil.css"> 
+     <link rel="stylesheet" href="odevler/odev2stil.css"> 
     <style>
         .tablo2 {
             width: 60%;
@@ -25,9 +25,51 @@
         .tablo2-h2{
             text-align: center;
         }
+
+
+
+
+.container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+        }
+
+        .yuvarlak {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            position: absolute; 
+            opacity: 0.7; 
+            mix-blend-mode: multiply;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); 
+            border: 2px solid rgba(255, 255, 255, 0.2); 
+        }
+
+        .yuvarlak:nth-child(1) {
+            background-color: #a82020; 
+            top: 40px;
+            left: 40px;
+        }
+
+        .yuvarlak:nth-child(2) {
+            background-color: #1f4f8e;
+            top: 40px;
+            right: 40px;
+        }
+
+
+        .yuvarlak:nth-child(3) {
+            background-color: #c97c11; 
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 <body>
+    <h1>Ödev 1</h1>
+    <hr>
     <h2 class="tablo1-h1">1. Tablo: Harici CSS Dosyası Kullanımı</h2>
     <table class="tablo1">
         <thead>
@@ -97,6 +139,13 @@
             </tr>
         </tbody>
     </table>
+    <h1>Ödev 2</h1>
+    <hr>
+    <div class="container">
+        <div class="yuvarlak"></div>
+        <div class="yuvarlak"></div>
+        <div class="yuvarlak"></div>
+    </div>
 
 </body>
 </html>
