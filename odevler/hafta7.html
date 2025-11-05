@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hafta-7</title>
+<style>
+  body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff8dc;
+  }
+
+  /* Ortak özellikler */
+  .face {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eye {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+  }
+
+  .eye.left { left: 35px; }
+  .eye.right { right: 35px; }
+
+  .mouth {
+    position: absolute;
+    bottom: 35px;
+    width: 40px;
+    height: 15px;
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  /* 1. Yukarı aşağı gidip gelen */
+  .updown {
+    background-color: purple;
+    animation: updown 2s infinite alternate;
+  }
+  @keyframes updown {
+    from { transform: translateY(0); }
+    to { transform: translateY(-80px); }
+  }
+
+  /* 2. Büyüyüp küçülen ve rengi değişen */
+  .grow {
+    background-color: red;
+    animation: grow 3s infinite alternate;
+  }
+  @keyframes grow {
+    0% { transform: scale(1); background-color: red; }
+    50% { transform: scale(1.4); background-color: orange; }
+    100% { transform: scale(1); background-color: red; }
+  }
+
+  /* 3. Transparan değeri artan ve azalan */
+  .fade {
+    background-color: pink;
+    animation: fade 2s infinite alternate;
+  }
+  @keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+  }
+
+  /* 4. Sağa sola giden gelen */
+  .leftright {
+    background-color: blue;
+    animation: leftright 2s infinite alternate;
+  }
+  @keyframes leftright {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); }
+  }
+
+  .rotate {
+    background-color: green;
+    animation: rotate 3s linear infinite;
+  }
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="face updown">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="face grow">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="face fade">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="face leftright">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="face rotate">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+
+</body>
+</html>
