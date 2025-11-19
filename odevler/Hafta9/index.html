@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hafta-9</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
 
+        #circle {
+            width: 180px;      
+            height: 180px;
+            border-radius: 50%;
+            background: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 2px solid #333;
+        }
+
+        .box-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .image-box {
+            width: 220px;        
+            height: 150px;
+            background: rgb(255, 172, 94);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #333;
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .btns {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hafta-9</h1>
+
+    <div id="circle">
+        <img id="changingImg">
+    </div>
+
+    <hr>
+
+
+    <div class="box-container">
+
+        <div>
+            <div class="image-box">
+                <img id="img1" src="resim1.png">
+            </div>
+            <div class="btns">
+                <button onclick="goster(1)">Göster</button>
+                <button onclick="gizle(1)">Gizle</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-box">
+                <img id="img2" src="resim2.png">
+            </div>
+            <div class="btns">
+                <button onclick="goster(2)">Göster</button>
+                <button onclick="gizle(2)">Gizle</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="image-box">
+                <img id="img3" src="resim3.png">
+            </div>
+            <div class="btns">
+                <button onclick="goster(3)">Göster</button>
+                <button onclick="gizle(3)">Gizle</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        function randomColor() {
+            return "#" + Math.floor(Math.random() * 16777215).toString(16);
+        }
+        document.body.style.backgroundColor = randomColor();
+
+
+        let images = [
+            "resim.png",
+            "resim1.png", "resim2.png", "resim3.png", "resim4.png",
+            "resim5.png", "resim6.png", "resim7.png", "resim8.png", "resim9.png"
+        ];
+
+
+        let randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById("changingImg").src = images[randomIndex];
+
+ 
+        function goster(n) {
+            document.getElementById("img" + n).style.display = "block";
+        }
+
+        function gizle(n) {
+            document.getElementById("img" + n).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
