@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hybrid Royale - Cat & Mouse Edition</title>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id="gamebar">
+        <div class="score-board">
+            <span id="score-label">
+                <span class="lang-en">Mice Caught:</span>
+                <span class="lang-tr" style="display:none;">Yakalanan Fare:</span>
+            </span>
+            <span id="current-score">0</span>
+
+            <span id="target-label">
+                <span class="lang-en">Target:</span>
+                <span class="lang-tr" style="display:none;">Hedef:</span>
+            </span>
+            <span id="target-score">10</span>
+        </div>
+    </div>
+
+    <!-- Dil Butonu -->
+    <div class="lang-btn-wrapper">
+        <button id="langBtn">TR</button>
+    </div>
+
+    <canvas id="canvas" height="600" width="1200"></canvas>
+
+    <div class="instruction">
+        <p class="lang-en">
+            Use Arrow Keys or W/A/S/D to move. Avoid the dogs and catch mice to win!
+            You are immortal for 3 seconds when the game starts.
+        </p>
+        <p class="lang-tr" style="display:none;">
+            Hareket etmek için Ok Tuşlarını veya W/A/S/D tuşlarını kullanın. Köpeklerden kaçın ve kazanmak için fareleri yakalayın!
+            Oyun başladığında 3 saniyeliğine ölümsüzsünüz.
+        </p>
+    </div>
+
+    <div class="game-settings">
+        <div class="game-settings-list">
+
+            <p>
+                <small>
+                    <span class="lang-en">Leave empty for default values.</span>
+                    <span class="lang-tr" style="display:none;">Varsayılan değerler için boş bırakabilirsiniz.</span>
+                </small>
+            </p>
+
+            <form class="setting-form">
+
+                <div class="enemies-control">
+                    <label>
+                        <strong>
+                            <span class="lang-en">Number of Dogs (Enemies): </span>
+                            <span class="lang-tr" style="display:none;">Köpek Sayısı (Düşman): </span>
+                        </strong>
+                    </label>
+                    <br>
+                    <small>
+                        <span class="lang-en">Min: 2, Max: 50</span>
+                        <span class="lang-tr" style="display:none;">Min: 2, Maks: 50</span>
+                    </small>
+                    <br>
+                    <input id="enemy_numbers" type="number" name="enemies_number" placeholder="10">
+                </div>
+
+                <div class="points-control">
+                    <label>
+                        <strong>
+                            <span class="lang-en">Target Mice Count: </span>
+                            <span class="lang-tr" style="display:none;">Yakalanacak Fare Sayısı: </span>
+                        </strong>
+                    </label>
+                    <br>
+                    <small>
+                        <span class="lang-en">How many mice to catch to win?</span>
+                        <span class="lang-tr" style="display:none;">Kazanmak için kaç fare lazım?</span>
+                    </small>
+                    <br>
+                    <input id="target_input" type="number" name="target_score" placeholder="10">
+                </div>
+
+            </form>
+
+            <div class="button">
+                <button class="start start-btn">
+                    <span class="lang-en">Start Hunt</span>
+                    <span class="lang-tr" style="display:none;">Avı Başlat</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="game-over">
+        <h1></h1>
+        <button class="retry-btn" onclick="window.location.reload();"></button>
+    </div>
+
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>

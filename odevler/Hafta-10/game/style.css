@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f6ff; /* Açık pastel mavi */
+    color: #333;
+}
+
+/* Canvas */
+body > canvas {
+    margin: 1rem auto;
+    border: 3px solid #ffb74d; /* Turuncu kenarlık */
+    display: block;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Üst bar */
+#gamebar {
+    display: flex;
+    margin: 1rem auto 0.3rem auto;
+    font-family: 'Black Han Sans', sans-serif;
+    justify-content: center;
+}
+
+/* Skor kutusu */
+.score-board {
+    background: #ffffff;
+    padding: 10px 24px;
+    border-radius: 999px;
+    color: #333;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e3e7ff;
+}
+
+#current-score,
+#target-score {
+    font-weight: 700;
+    color: #ff7043;
+}
+
+/* Dil butonunu sağ üstte sabitle */
+.lang-btn-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 1000;
+}
+
+#langBtn {
+    padding: 8px 18px;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+}
+
+#langBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+#langBtn:active {
+    transform: scale(0.97);
+}
+
+/* Start butonu */
+.button {
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.start {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    padding: 0.6em 1.6em;
+    border: 0;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 5px 14px rgba(67, 160, 71, 0.4);
+    transition: all 0.25s ease;
+}
+
+.start:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(67, 160, 71, 0.55);
+}
+
+.start:active {
+    transform: scale(0.97);
+}
+
+/* Game over ekranı */
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.98);
+    color: #333;
+    padding: 2.5em 3em;
+    text-align: center;
+    border-radius: 16px;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.game-over h1 {
+    margin-bottom: 0.8rem;
+}
+
+.game-over .retry-btn {
+    background: #ff7043;
+    color: #fff;
+    padding: 0.6em 2.2em;
+    margin: 0.5em auto 0 auto;
+    text-align: center;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 5px 14px rgba(255, 112, 67, 0.55);
+    transition: all 0.25s ease;
+}
+
+.game-over .retry-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(255, 112, 67, 0.7);
+}
+
+/* Ayarlar penceresi */
+.game-settings {
+    background: #ffffff;
+    padding: 2em 2.5em;
+    text-align: left;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    max-width: 420px;
+    width: 100%;
+}
+
+.setting-form div {
+    margin: 1em 0;
+}
+
+input, select {
+    background: #f5f7ff;
+    border: 1px solid #d6dcff;
+    margin-top: 0.4em;
+    padding: 0.5em 0.8em;
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Bölücü çizgi */
+.game-settings-list p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1em;
+}
+
+/* Talimatlar */
+.instruction {
+    text-align: center;
+    margin: 0.4rem auto 0 auto;
+    color: #444;
+}
+
+.instruction p {
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.85);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
