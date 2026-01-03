@@ -6,22 +6,24 @@ export default function Content() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fetchIpData = async (ip = "") => {
-    setLoading(true);
-    setError(null);
-    try {
-      // ip-api.com boş bırakılırsa istek atan kişinin IP'sini döner
-      const res = await fetch(`http://ip-api.com/json/${ip}?fields=66846719`);
-      const data = await res.json();
-      
-      if (data.status === "fail") throw new Error("Geçersiz IP veya veri bulunamadı.");
-      setIpData(data);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+// Final_Odevi/components/Content.jsx içinde fetch kısmını şu şekilde değiştir:
+
+const fetchIpData = async (ip = "") => {
+  setLoading(true);
+  setError(null);
+  try {
+    // BURAYI DEĞİŞTİRDİK: Kendi API'mize soruyoruz
+    const res = await fetch(`/api/proxy?ip=${ip}`);
+    const data = await res.json();
+    
+    if (data.status === "fail") throw new Error("Geçersiz IP veya veri bulunamadı.");
+    setIpData(data);
+  } catch (err) {
+    setError("Veri alınamadı. Lütfen tekrar deneyin.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   // İlk girişte kullanıcının kendi IP'sini getirir
   useEffect(() => {
