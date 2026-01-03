@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #050a14; /* Koyu Gece Mavisi */
+  --card-bg: #0a192f;
+  --neon-blue: #00f2ff;
+  --text-color: #e6f1ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.7);
+}
+
+.header { text-align: center; padding: 2rem; border-bottom: 1px solid #112240; }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 2rem 0;
+}
+
+input {
+  background: #112240;
+  border: 1px solid var(--neon-blue);
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  width: 250px;
+}
+
+button {
+  background: var(--neon-blue);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info-card, .map-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #233554;
+}
+
+.flag-wrapper img {
+  width: 80px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+iframe {
+  border-radius: 10px;
+  border: 1px solid var(--neon-blue);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: #8892b0;
+}
