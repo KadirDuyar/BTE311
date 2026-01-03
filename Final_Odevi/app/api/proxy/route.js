@@ -1,7 +1,18 @@
 // Final_Odevi/app/api/proxy/route.js
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
-  const ip = searchParams.get('ip') || ""; // Eğer IP boşsa kendi IP'ni çeker
+  let ip = searchParams.get('ip');
+
+  // Eğer kullanıcı bir IP girmediyse (ilk açılış), 
+  // Vercel üzerinden gelen gerçek kullanıcı IP'sini (x-forwarded-for) al.
+  if (!ip) {
+    const forwarded = request.headers.get("x-forwarded-for");
+    if (forwarded) {
+      ip = forwarded.split(',')[0]; // Birden fazla IP varsa ilkini al
+    } else {
+      ip = ""; // Bulunamazsa boş bırak (ip-api sunucu IP'sini döndürür)
+    }
+  }
 
   try {
     const res = await fetch(`http://ip-api.com/json/${ip}?fields=66846719`);
