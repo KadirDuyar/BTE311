@@ -1,30 +1,42 @@
-# 🌍 IP Vision - Konum Takip Uygulaması
+# 🌍 IP VISION - Dinamik Geolocation Takip Sistemi
 
-Bu proje, **Web Programcılığı** dersi final ödevi kapsamında React (Next.js) kullanılarak geliştirilmiş dinamik bir web uygulamasıdır. Kullanıcıların IP adreslerini sorgulayarak coğrafi konumlarını, internet sağlayıcılarını ve harita üzerindeki yerlerini anlık olarak gösterir.
+![Vercel Status](https://img.shields.io/website?url=https%3A%2F%2Fbte-311.vercel.app&label=Deployment&style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-## 🚀 Proje Özellikleri
-- **Otomatik Algılama:** Site açıldığında kullanıcının kendi IP adresini ve konumunu otomatik olarak getirir.
-- **Dinamik Sorgulama:** Kullanıcıdan alınan IP parametresi ile dünya üzerindeki herhangi bir adresin bilgilerine erişim sağlar.
-- **Görsel Zenginlik:** Sorgulanan ülkenin bayrağını ve konumun Google Maps üzerindeki canlı haritasını gösterir.
-- **Modern Arayüz:** Gece mavisi ve neon mavi detaylarla tasarlanmış, kullanıcı dostu karanlık tema.
-- **Güvenli API Erişimi:** HTTPS/HTTP kısıtlamalarını aşmak için Next.js API Routes (Proxy) mimarisi kullanılmıştır.
+**IP Vision**, kullanıcıların IP adreslerini gerçek zamanlı olarak sorgulayan, konum verilerini analiz eden ve görsel bir harita üzerinde sunan modern bir Web uygulamasıdır. 
 
-## 🛠️ Kullanılan Teknolojiler
-- **Framework:** [Next.js](https://nextjs.org/) (React tabanlı)
-- **API:** [ip-api.com](http://ip-api.com) (Açık API)
-- **Stil:** Özel CSS (Neon Dark Theme)
-- **Harita:** Google Maps Embed API
-- **Yayın (Deployment):** Vercel
+---
 
-## 🔗 Kullanılan API Bilgisi
-Projede kullanılan veriler ücretsiz ve açık kaynaklı olan **ip-api** servisinden çekilmektedir.
-- **API Linki:** [http://ip-api.com](http://ip-api.com)
+## 📸 Uygulama Görünümü
+![Uygulama Ana Sayfa](./public/screenshot.png)
+*Gece mavisi ve neon detaylı modern "Dark Mode" arayüzü.*
 
-## 📦 Kurulum ve Çalıştırma
-Projeyi yerel bilgisayarınızda çalıştırmak için şu adımları izleyin:
+---
 
-1. Projeyi bilgisayarınıza indirin veya clone'layın.
-2. Terminal üzerinden proje klasörüne gidin.
-3. Gerekli paketleri kurun:
-   ```bash
-   npm install
+## ✨ Öne Çıkan Özellikler
+
+- 📍 **Otomatik IP Algılama:** Kullanıcı siteye girdiği an `x-forwarded-for` protokolü ile gerçek IP adresi ve konumu anında listelenir.
+- 🔍 **Global Sorgulama:** Herhangi bir IPv4 adresini saniyeler içinde analiz eder.
+- 🗺️ **Canlı Harita Entegrasyonu:** Google Maps Embed API ile koordinatları görselleştirir.
+- 🛡️ **Gelişmiş API Proxy:** HTTPS kısıtlamalarını aşmak için sunucu taraflı (Server-side) veri çekme mimarisi kullanılmıştır.
+- 📱 **Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarla tam uyumlu.
+
+---
+
+## 🖥️ Terminal Önizlemesi (Geliştirme Ortamı)
+
+Uygulama yerel ortamda (`localhost:3000`) çalıştırıldığında terminal görüntüsü şu şekildedir:
+
+```text
+> ip-vision-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.x.x
+   - Local:        http://localhost:3000
+   - Environments: .env
+
+ ✓ Ready in 1200ms
+ ○ Compiling / ...
+ ✓ Compiled in 450ms (165 modules)
+ GET /api/proxy?ip= 200 in 150ms  <-- Otomatik IP tespiti başarılı!
