@@ -1,4 +1,4 @@
-# IP Sorgulama - React App
+# IP Sorgulama React App
 
 Web Tabanlı Programlama dersi final ödevi için **Next.js** ve **React** kullanılarak geliştirilmiş, dinamik IP sorgulama ve konum görüntüleme uygulamasıdır.
 
@@ -6,10 +6,14 @@ Web Tabanlı Programlama dersi final ödevi için **Next.js** ve **React** kulla
 
 **Yerel Geliştirme Ortamı (Terminal + Tarayıcı):**
 *Uygulamanın yerel sunucuda (localhost) hatasız çalıştığını gösteren ekran görüntüsü.*
-![Geliştirme Ortamı](./public/screenshot2.png)
+<br>
+<img src="./public/screenshot2.png" alt="Geliştirme Ortamı" width="700">
+<br>
 
 **Uygulama Arayüzü (Örnek Sorgu):**
-![Arayüz](./public/screenshot3.png)
+<br>
+<img src="./public/screenshot2.png" alt="Arayüz" width="700">
+<br>
 
 ## Kullanılan Teknolojiler ve API
 
