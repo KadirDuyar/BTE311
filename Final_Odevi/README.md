@@ -6,11 +6,15 @@ Web Tabanlı Programlama dersi final ödevi için **Next.js** ve **React** kulla
 
 **Yerel Geliştirme Ortamı (Terminal + Tarayıcı):**
 *Uygulamanın yerel sunucuda (localhost) hatasız çalıştığını gösteren ekran görüntüsü.*
+
+
 <br>
 <img src="./public/screenshot2.png" alt="Geliştirme Ortamı" width="700">
 <br>
 
 **Uygulama Arayüzü (Örnek Sorgu):**
+
+
 <br>
 <img src="./public/screenshot3.png" alt="Arayüz" width="700">
 <br>
