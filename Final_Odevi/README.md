@@ -1,6 +1,6 @@
 # IP Sorgulama - React App
-(./public/screenshot.png)
-Web Programcılığı dersi final ödevi için **Next.js** ve **React** kullanılarak geliştirilmiş, dinamik IP sorgulama ve konum görüntüleme uygulamasıdır.
+
+Web Tabanlı Programlama dersi final ödevi için **Next.js** ve **React** kullanılarak geliştirilmiş, dinamik IP sorgulama ve konum görüntüleme uygulamasıdır.
 
 ## Proje Görselleri
 
@@ -35,4 +35,4 @@ Projeyi bilgisayarınızda çalıştırmak için terminali açın ve sırasıyla
 
 ---
 **Hazırlayan:** [Kadir Duyar]
-**Öğrenci No/Ders:** [2230780028] - BTE311
+**Öğrenci No/Ders:** [2230780028]/BTE311
