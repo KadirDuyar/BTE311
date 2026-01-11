@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "IP Vision - Geolocation",
+  title: "IP Sorgulama",
 };
 
 export default function RootLayout({ children }) {
