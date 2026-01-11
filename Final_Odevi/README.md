@@ -4,27 +4,26 @@ Web Tabanlı Programlama dersi final ödevi için **Next.js** ve **React** kulla
 
 ## Proje Görselleri
 
-**Yerel Geliştirme Ortamı (Terminal + Tarayıcı):**
-*Uygulamanın yerel sunucuda (localhost) hatasız çalıştığını gösteren ekran görüntüsü.*
+**Yerel Geliştirme Ortamı:**
+
 
 
 <br>
-<img src="./public/screenshot2.png" alt="Geliştirme Ortamı" width="700">
+<img src="./public/screenshot3.png" alt="Geliştirme Ortamı" width="700">
 <br>
 
 **Uygulama Arayüzü (Örnek Sorgu):**
 
 
 <br>
-<img src="./public/screenshot3.png" alt="Arayüz" width="700">
+<img src="./public/screenshot2.png" alt="Arayüz" width="700">
 <br>
 
 ## Kullanılan Teknolojiler ve API
 
 * **Framework:** Next.js / React
-* **API Kaynağı:** [https://ipwho.is](https://ipwho.is) (Ücretsiz ve HTTPS destekli coğrafi veri servisi)
+* **API Kaynağı:** [https://ipwho.is](https://ipwho.is)
 * **Harita:** Google Maps Embed API
-* **Özellikler:** Proxy Route (Backend), Dinamik Bayrak/Harita, Neon Karanlık Tema.
 
 ## Kurulum ve Çalıştırma
 
@@ -42,5 +41,5 @@ Projeyi bilgisayarınızda çalıştırmak için terminali açın ve sırasıyla
     `http://localhost:3000`
 
 ---
-**Hazırlayan:** [Kadir Duyar]
-**Öğrenci No/Ders:** [2230780028]/BTE311
+**Hazırlayan:** Kadir Duyar
+**Öğrenci No/Ders:** 2230780028/BTE311
