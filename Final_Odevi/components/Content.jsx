@@ -6,13 +6,10 @@ export default function Content() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-// Final_Odevi/components/Content.jsx içinde fetch kısmını şu şekilde değiştir:
-
 const fetchIpData = async (ip = "") => {
   setLoading(true);
   setError(null);
   try {
-    // BURAYI DEĞİŞTİRDİK: Kendi API'mize soruyoruz
     const res = await fetch(`/api/proxy?ip=${ip}`);
     const data = await res.json();
     
@@ -25,7 +22,6 @@ const fetchIpData = async (ip = "") => {
   }
 };
 
-  // İlk girişte kullanıcının kendi IP'sini getirir
   useEffect(() => {
     fetchIpData();
   }, []);
