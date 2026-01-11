@@ -16,7 +16,7 @@ Web Tabanlı Programlama dersi final ödevi için **Next.js** ve **React** kulla
 
 
 <br>
-<img src="./public/screenshot2.png" alt="Arayüz" width="700" height="600">
+<img src="./public/screenshot2.png" alt="Arayüz" height="600" width="700" >
 <br>
 
 ## Kullanılan Teknolojiler ve API
